@@ -1,0 +1,83 @@
+.descriptionbox {
+  margin: 50px auto;
+  padding: 30px;
+  max-width: 900px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  position: relative;
+  overflow: hidden;
+}
+
+.descriptionbox::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  padding: 2px;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad0c4, #ffdde1);
+  -webkit-mask: linear-gradient(white, white) content-box,
+    linear-gradient(white, white);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+}
+
+.descriptionbox-navigator {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.descriptionbox-nav-box {
+  width: auto;
+  padding: 12px 20px;
+  height: auto;
+  font-size: 15px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.descriptionbox-nav-box:hover {
+  background: linear-gradient(135deg, #ff7eb3, #ff758c);
+  transform: scale(1.05);
+}
+
+.descriptionbox-description {
+  padding: 35px;
+  padding-bottom: 55px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 430px) {
+  .descriptionbox {
+    margin: 30px 10px;
+    padding: 20px;
+  }
+
+  .descriptionbox-navigator {
+    gap: 10px;
+    flex-direction: column;
+  }
+
+  .descriptionbox-nav-box {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+
+  .descriptionbox-description {
+    padding: 20px;
+    padding-bottom: 40px;
+    font-size: 14px;
+  }
+}

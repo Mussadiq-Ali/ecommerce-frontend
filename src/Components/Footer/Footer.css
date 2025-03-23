@@ -1,0 +1,147 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  background: linear-gradient(to bottom, #ffe1f0, #fff);
+  padding: 50px 20px;
+  color: #333;
+  width: 100%;
+  max-width: 100vw;
+  border-top: 2px solid #f8c8dc;
+  overflow: hidden;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* Logo Section */
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-logo p {
+  color: #222;
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Footer Links */
+.footer-links {
+  display: flex;
+  flex-direction: row; /* Default: Horizontal */
+  justify-content: center;
+  list-style: none;
+  gap: 35px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #5a5a5a;
+  padding: 0;
+}
+
+.footer-links li {
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-links li:hover {
+  color: #ff4081;
+}
+
+/* Social Icons */
+.footer-social-icon {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.footer-icons-container {
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #ff80ab;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+.footer-icons-container img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.footer-icons-container:hover {
+  transform: scale(1.1);
+  background: #ff80ab;
+}
+
+/* Copyright */
+.footer-copyright {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  font-size: 16px;
+  color: #444;
+}
+
+.footer-copyright hr {
+  width: 80%;
+  border: none;
+  border-radius: 10px;
+  height: 3px;
+  background: #ffb3c6;
+}
+
+/* Mobile Responsive (iPhone 12 Pro & Other Small Screens) */
+@media (max-width: 768px) {
+  .footer {
+    padding: 30px 10px;
+    gap: 20px;
+  }
+
+  .footer-logo p {
+    font-size: 24px;
+  }
+
+  /* Footer links vertical on small screens */
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    gap: 8px;
+  }
+
+  .footer-social-icon {
+    gap: 10px;
+  }
+
+  .footer-icons-container {
+    width: 35px;
+    height: 35px;
+    padding: 6px;
+  }
+
+  .footer-icons-container img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .footer-copyright {
+    font-size: 14px;
+  }
+
+  .footer-copyright hr {
+    width: 90%;
+  }
+}

@@ -1,0 +1,255 @@
+/* ✅ Product Display Container */
+.productdisplay {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px;
+  background: linear-gradient(135deg, #f5a9f7, #8ec5fc);
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  filter: blur(1px);
+}
+
+/* ✅ Hover par Blur Hatana */
+.productdisplay:hover {
+  filter: blur(0px);
+}
+
+/* ✅ Left Side (Images Section) */
+.productdisplay-left {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ✅ Thumbnails List */
+.productdisplay-img-list {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.productdisplay-img-list img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: transform 0.3s ease, border 0.3s ease;
+}
+
+.productdisplay-img-list img:hover {
+  transform: scale(1.1);
+  border: 2px solid #ff4081;
+}
+
+/* ✅ Main Image */
+.productdisplay-img {
+  display: flex;
+  justify-content: center;
+}
+
+.productdisplay-main-img {
+  width: 280px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ✅ Right Side (Product Details) */
+.productdisplay-right {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+  width: 380px;
+  backdrop-filter: blur(8px);
+}
+
+/* ✅ Product Name */
+.productdisplay-right h1 {
+  font-size: 22px;
+  color: #222;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+/* ✅ Rating Section */
+.productdisplay-right-star {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 8px;
+}
+
+.productdisplay-right-star img {
+  width: 16px;
+}
+
+.productdisplay-right-star p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* ✅ Pricing */
+.productdisplay-right-prices {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.productdisplay-right-price-old {
+  text-decoration: line-through;
+  color: #999;
+  font-size: 16px;
+}
+
+.productdisplay-right-price-new {
+  color: #ff4081;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* ✅ Description */
+.productdisplay-right-description {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 18px;
+}
+
+/* ✅ Size Selection */
+.productdisplay-right-size h1 {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.productdisplay-right-size-options {
+  display: flex;
+  gap: 8px;
+}
+
+.productdisplay-right-size-options div {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.productdisplay-right-size-options div:hover {
+  background-color: #ff4081;
+  color: white;
+  border: 1px solid #ff4081;
+}
+
+/* ✅ Add to Cart Button */
+.productdisplay-right button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background: #ff4081;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  margin-top: 15px;
+  box-shadow: 0px 4px 10px rgba(255, 64, 129, 0.4);
+}
+
+/* ✅ Hover Effect */
+.productdisplay-right button:hover {
+  background: #e63270;
+  box-shadow: 0px 5px 12px rgba(255, 64, 129, 0.6);
+}
+
+/* ✅ Click Effect */
+.productdisplay-right button:active {
+  transform: scale(0.95);
+  background: #d92a65;
+  box-shadow: 0px 3px 8px rgba(255, 64, 129, 0.5);
+}
+
+/* ✅ Category & Tags */
+.productdisplay-right-category {
+  font-size: 14px;
+  margin-top: 12px;
+  color: #444;
+}
+
+.productdisplay-right-category span {
+  font-weight: bold;
+  color: #000;
+}
+
+/* ✅ Responsive Design for iPhone 12 Pro & Other Small Screens */
+@media (max-width: 420px) {
+  .productdisplay {
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+    align-items: center;
+    filter: blur(1px);
+  }
+
+  .productdisplay-left {
+    align-items: center;
+  }
+
+  .productdisplay-img-list img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .productdisplay-main-img {
+    width: 250px;
+    height: 280px;
+  }
+
+  .productdisplay-right {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .productdisplay-right h1 {
+    font-size: 18px;
+  }
+
+  .productdisplay-right-prices {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .productdisplay-right-price-old {
+    font-size: 14px;
+  }
+
+  .productdisplay-right-price-new {
+    font-size: 18px;
+  }
+
+  .productdisplay-right-size-options {
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .productdisplay-right-size-options div {
+    padding: 6px 10px;
+  }
+
+  .productdisplay-right button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .productdisplay:hover {
+    filter: blur(0px);
+  }
+}

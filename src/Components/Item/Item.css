@@ -1,0 +1,107 @@
+/* ✅ Popular Section Styling */
+.popular {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  height: auto;
+  padding: 20px;
+}
+
+.popular h1 {
+  font-size: 50px;
+  font-weight: 600;
+  text-align: center;
+  background: linear-gradient(180deg, #4a4a4a 0%, #8a8a8a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.popular hr {
+  width: 150px;
+  height: 4px;
+  border-radius: 10px;
+  background: #252525;
+}
+
+/* ✅ Parent Container (4 items ek row me sath sath) */
+.popular-item {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly; /* Items ek line me evenly space hongay */
+  gap: 10px; /* Halka sa gap */
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* ✅ Item Box */
+.item {
+  width: 260px; /* Box ka size slightly adjust kiya */
+  background: linear-gradient(135deg, #f8c8dc, #c1e1ff) !important;
+  border-radius: 10px;
+  padding: 8px;
+  transition: 0.3s;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.item:hover {
+  transform: scale(1.05);
+  transition: 0.6s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* ✅ Image Fix */
+.item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* ✅ Text Styling */
+.item p {
+  margin: 3px 0;
+  font-size: 13px;
+  color: #333;
+}
+
+/* ✅ Price Box */
+.item-prices {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.item-price-new {
+  color: #374151;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.item-price-old {
+  color: #8c8c8c;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: line-through;
+}
+
+/* ✅ Responsive Fix */
+@media (max-width: 1024px) {
+  .popular-item {
+    justify-content: center;
+  }
+  .item {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .item {
+    width: 100%;
+  }
+}
